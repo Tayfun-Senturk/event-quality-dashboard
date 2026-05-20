@@ -1,4 +1,4 @@
-# Event Quality Dashboard
+# Event Quality Dashboard https://github.com/Tayfun-Senturk/event-quality-dashboard
 
 Bu proje, dijital ürünlerde oluşan event verilerinde veri kalitesi problemlerini izlemek ve basit anomali tespiti yapmak için geliştirilmiş web tabanlı bir dashboard uygulamasıdır.
 
