@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: event_quality_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: event_quality_db
+      POSTGRES_USER: event_quality_user
+      POSTGRES_PASSWORD: event_quality_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U event_quality_user -d event_quality_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
